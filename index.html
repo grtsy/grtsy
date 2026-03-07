@@ -11,6 +11,12 @@
             padding: 0;
             box-sizing: border-box;
             font-family: "Microsoft YaHei", sans-serif;
+            .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持图片比例，裁剪多余部分，填满容器 */
+  display: block; /* 去掉图片下方默认的空白间隙 */
+}  
         }
         body {
             background: #f5f7fa;
@@ -132,7 +138,7 @@
     <div class="container nav">
         <a href=" " class="logo">高清壁纸大全</a >
         <div class="nav-links">
-            <a href="/">首页</a >
+            <a href="#">首页</a >
             <a href="#">分类</a >
             <a href="#">关于</a >
             <a href="#">联系</a >
@@ -144,38 +150,44 @@
 
     <!-- 顶部广告位 -->
     <div class="ad-top">
-        【顶部广告位】Google AdSense / 其他广告代码粘贴这里
+        【好言】喜至庆来，永永其祥。
     </div>
 
     <!-- 内容区 -->
     <div class="section">
         <h2>今日推荐壁纸</h2>
         <div class="wallpaper-grid">
-            <div class="item">壁纸 1</div>
-            <div class="item">壁纸 2</div>
-            <div class="item">壁纸 3</div>
-            <div class="item">壁纸 4</div>
+            <div1 class="item">
+                <img src="图片1.JPG" alt="人物图片">
+
+            </div1>
+            <div2 class="item">
+                <img src="图片2.JPG" alt="机车"></div2>
+            <div class="item">
+                <img src="前端网页图片/图片3.JPG" alt="机车"></div>
+            <div class="item">
+              <img src="前端网页图片/图片4.JPG" alt="机车"></div>
         </div>
     </div>
 
     <!-- 中间广告 -->
     <div class="ad-middle">
-        【中间广告位】广告代码粘贴这里
+        【祈福】喜盈我室，所愿比得。
     </div>
 
     <div class="section">
         <h2>最新更新</h2>
         <div class="wallpaper-grid">
-            <div class="item">壁纸 5</div>
-            <div class="item">壁纸 6</div>
-            <div class="item">壁纸 7</div>
-            <div class="item">壁纸 8</div>
+            <div class="item"><img src="前端网页图片/图片5.JPG" alt="机车"></div>
+            <div class="item"><img src="前端网页图片/图片6.JPG" alt="机车"></div>
+            <div class="item"><img src="前端网页图片/图片8.JPG" alt="机车"></div>
+            <div class="item"><img src="前端网页图片/图片9.jpg" alt="机车"></div>
         </div>
     </div>
 
     <!-- 底部广告 -->
     <div class="ad-bottom">
-        【底部广告位】广告代码粘贴这里
+        【妙语】日月相望，光明盛昌。
     </div>
 
 </div>
@@ -184,16 +196,6 @@
     <p>© 2026 ryxwallsgq.com 高清壁纸大全 版权所有</p >
     <p>本网站仅提供壁纸分享，无商业用途</p >
 </footer>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?fdc78f4212cca8c4324afa7f98f25a58";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
 </body>
 </html>
-
