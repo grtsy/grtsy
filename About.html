@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 高清壁纸大全</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+        .nav {
+            display: flex;
+            gap: 25px;
+            position: relative;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #666;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #007bff;
+        }
+        .nav a.active {
+            color: #007bff;
+            font-weight: bold;
+        }
+        /* 下拉分类样式 */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 6px;
+            min-width: 140px;
+            padding: 10px 0;
+            z-index: 999;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 8px 15px;
+            white-space: nowrap;
+        }
+
+        /* 关于页面内容 */
+        .about-wrap {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            line-height: 2.2;
+            font-size: 16px;
+            color: #444;
+        }
+        .about-wrap h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">高清壁纸大全</div>
+        <div class="nav">
+            <a href="index.html">首页</a>
+            <div class="dropdown">
+                <a href="category.html">分类 ▾</a>
+                <div class="dropdown-menu">
+                    <a href="game.html">游戏壁纸</a>
+                    <a href="star.html">明星壁纸</a>
+                    <a href="scenery.html">风景壁纸</a>
+                    <a href="sport.html">体育壁纸</a>
+                    <a href="phone.html">手机壁纸</a>
+                    <a href="pc.html">PC端壁纸</a>
+                </div>
+            </div>
+            <a href="about.html" class="active">关于</a>
+            <a href="contact.html">联系</a>
+        </div>
+    </div>
+
+    <div class="about-wrap">
+        <h2>关于本站</h2>
+        <p>欢迎来到<strong>高清壁纸大全</strong>网站，本站是一个免费分享优质高清壁纸的个人站点。</p>
+        <p>我们专注收集整理各类好看、高清、无水印壁纸，包含：游戏、明星、风景、体育、手机、电脑PC等多种分类，满足不同用户的使用需求。</p>
+        <br>
+        <p><strong>网站更新说明：</strong></p>
+        <p>本站会保持<strong>每周定期更新</strong>全新壁纸资源，旧壁纸全部分类归档保留，方便大家随时翻看往期内容。</p>
+        <br>
+        <p><strong>站点声明：</strong></p>
+        <p>本站所有壁纸仅供个人欣赏、桌面美化使用，禁止用于商业用途；
+        如有版权问题，请及时联系我，我会第一时间进行删除处理。</p>
+        <br>
+        <p>感谢每一位访客的支持与喜欢，我会持续用心维护、不断更新内容！</p>
+    </div>
+
+</body>
+</html>

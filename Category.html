@@ -1,0 +1,65 @@
+<style>
+/* 主导航 */
+.nav {
+    display: flex;
+    gap: 25px;
+    position: relative;
+}
+.nav a {
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+.nav a:hover {
+    color: #007bff;
+}
+
+/* 下拉菜单容器 */
+.dropdown {
+    position: relative;
+}
+/* 下拉盒子默认隐藏 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    min-width: 140px;
+    padding: 10px 0;
+    z-index: 999;
+}
+/* 鼠标悬停显示下拉 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 8px 15px;
+    white-space: nowrap;
+}
+</style>
+
+<!-- 导航栏结构 -->
+<div class="nav">
+    <a href="index.html">首页</a>
+
+    <!-- 分类下拉 -->
+    <div class="dropdown">
+        <a href="category.html">分类 ▾</a>
+        <div class="dropdown-menu">
+            <a href="game.html">游戏壁纸</a>
+            <a href="star.html">明星壁纸</a>
+            <a href="scenery.html">风景壁纸</a>
+            <a href="sport.html">体育壁纸</a>
+            <a href="phone.html">手机壁纸</a>
+            <a href="pc.html">PC端壁纸</a>
+        </div>
+    </div>
+
+    <a href="about.html">关于</a>
+    <a href="contact.html">联系</a>
+</div>
