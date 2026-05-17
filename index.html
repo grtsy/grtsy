@@ -2,6 +2,48 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <style>
+.nav {
+  display: flex;
+  gap: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.drop-btn {
+  color: #0066cc;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 8px 0;
+  min-width: 120px;
+  display: none;
+  z-index: 999;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高清壁纸大全 - 每日更新</title>
     <meta name="description" content="免费高清手机壁纸、电脑壁纸，每日更新，无水印下载">
@@ -132,18 +174,60 @@
     </style>
 </head>
 <body>
-
-<!-- 导航 -->
-<header>
-    <div class="container nav">
-        <a href=" " class="logo">高清壁纸大全</a >
-        <div class="nav-links">
-            <a href="index.html">首页</a >
-            <a href="Category.html">分类</a >
-            <a href="About.html">关于</a >
-            <a href="Contact.html">联系</a >
-        </div>
+<body>
+<!-- 把这里开始粘贴 -->
+<div class="nav">
+  <a href="index.html">首页</a>
+  <div class="dropdown">
+    <span class="drop-btn">分类 ▾</span>
+    <div class="dropdown-menu">
+      <a href="#" data-type="game">游戏壁纸</a>
+      <a href="#" data-type="star">明星壁纸</a>
+      <a href="#" data-type="scenery">风景壁纸</a>
+      <a href="#" data-type="sport">体育壁纸</a>
+      <a href="#" data-type="mobile">手机壁纸</a>
+      <a href="#" data-type="pc">PC端壁纸</a>
     </div>
+  </div>
+  <a href="about.html">关于</a>
+  <a href="contact.html">联系</a>
+</div>
+<!-- 粘贴结束 -->
+
+<!-- 下面是你原来自己的页面内容，不动 -->
+<script>
+// 1. 点击分类，切换下拉显示/隐藏
+const dropdown = document.querySelector('.dropdown');
+dropdown.addEventListener('click', function(e) {
+  e.stopPropagation();
+  this.classList.toggle('active');
+});
+
+// 点击空白关闭下拉
+document.addEventListener('click', function() {
+  dropdown.classList.remove('active');
+});
+
+// 2. 点击选项筛选壁纸
+const menuItems = document.querySelectorAll('.dropdown-menu a');
+menuItems.forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    const type = this.dataset.type;
+    filterWallpaper(type);
+    dropdown.classList.remove('active');
+  });
+});
+
+// 筛选函数
+function filterWallpaper(type) {
+  const allWallpaper = document.querySelectorAll('.wallpaper');
+  allWallpaper.forEach(wp => {
+    wp.style.display = wp.classList.contains(type) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
 </header>
 
 <div class="container">
